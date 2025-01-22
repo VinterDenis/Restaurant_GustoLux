@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrei - Managerul Restaurantului</title>
+    <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+
+    <section class="hero">
+
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="nav-left">
+                <ul class="nav-links left-links">
+                    <li><a class="despre-noi" href="../../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                        <li><a class="meniu" href="../../Meniu/meniu.html">Meniu</a></li>
+                </ul>
+                </div>  
+                    <div class="logo">
+
+                    <a href="../../../index.html">
+                        <img src="../../Imagini/Logo(1).png" alt="Descriere imagine" />
+                    </a>
+                    
+                    </div>
+                    
+                <div class="nav-right">
+                        <ul class="nav-links right-links">
+                        <li><a class="echipa" href="../../Echipa/echipa.html">Echipa</a></li>
+                        <li><a class="contact" href="../../Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
+ 
+   
+      
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="../../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+        <li><a href="../../Meniu/meniu.html">Meniu</a></li>
+        <li><a href="../../Echipa/echipa.html">Echipa</a></li>
+        <li><a href="../../Contact/contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+        </header>
+
+    </section>
+
+    <main>
+        <section class="manager">
+            <h2>Andrei - Managerul restaurantului</h2>
+            <div class="manager-profile">
+                <img class="manager-img" src="../../Imagini/Manager.jpg" alt="Andrei - Managerul restaurantului">
+                <div class="manager-description">
+                    <p>
+                        Andrei este dedicat excelenței și are o experiență de peste 10 ani în industria ospitalității. Cu un simț organizatoric deosebit și o pasiune pentru servicii de calitate, Andrei se asigură că fiecare detaliu este atent supravegheat pentru a oferi oaspeților o experiență remarcabilă. El coordonează cu profesionalism echipa, fiind în permanentă legătură cu bucătarii și ospătarii pentru a menține un flux eficient și armonios în restaurant. 
+                   
+                        Cunoscut pentru abordarea sa prietenoasă și deschisă, Andrei este întotdeauna atent la nevoile clienților, tratându-i cu respect și grijă. Pe lângă gestionarea rezervărilor și a resurselor zilnice, Andrei investește timp în motivarea și dezvoltarea echipei sale, inspirându-i pe toți să lucreze la cele mai înalte standarde. Datorită profesionalismului și dedicării sale, Andrei a devenit figura centrală care definește experiența deosebită pe care oaspeții o trăiesc în fiecare vizită.
+                   </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            let isAnimating = false;
+            
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (isAnimating) return;
+                    isAnimating = true;
+                    
+                    this.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                    
+                    // Reset animation flag after transition
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 500);
+                });
+                
+                // Close menu when clicking a link
+                const mobileLinks = document.querySelectorAll('.mobile-menu a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (mobileMenu.classList.contains('active') && 
+                        !mobileMenu.contains(e.target) && 
+                        !hamburger.contains(e.target)) {
+                        hamburger.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+            
+        </script>
+        
+
+
+        <footer>
+            <div class="social-icons">
+                <a href="#"><img src="../../Imagini/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../../Imagini/tik tok.png" alt="Tik Tok"></a>
+                <a href="#"><img src="../../Imagini/facebook.png" alt="Facebook"></a>
+            </div>
+            <p>&copy; 2025 GustoLux. Toate drepturile rezervate.</p>
+        </footer>
+
+</body>
+</html>

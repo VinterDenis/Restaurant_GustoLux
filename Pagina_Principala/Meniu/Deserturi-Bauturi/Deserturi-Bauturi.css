@@ -1,0 +1,439 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d2bc9b;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(56, 44, 32, 0.75);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #FFF5DE;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(56, 44, 32, 0.75);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 0px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+} 
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px 25px;
+}
+
+.left-links li, .right-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF5DE;
+    font-weight: bold;
+    transition: border-bottom 0.1s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #FFF5DE;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    transition: transform 1s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1)
+}
+
+.hero {
+    position: relative;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    background: url('../../Imagini/multiple\ plates\ on\ a\ table\ with\ various\ dishes\ for\ a\ restaurant\ menu\ website\,\ W\ 1440\ H\ 1024.png') no-repeat center center/cover;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Menu sections */
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.menu-section h2 {
+    color: #4a3827;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4a3827;
+    font-style: italic;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    color: #4a3827;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .weight {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.menu-item .price {
+    color: #4a3827;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #382c20;
+    margin-top: 150px; /* Spațiu deasupra */
+   position: absolute   ;
+   width: 100%;
+   left: 0px;
+   right: 0px;
+    justify-content: center; /* Centrează pe verticală */
+    align-items: center; /* Centrează pe orizontală */
+    color: #fff; /* Asigură că textul este alb */
+}
+
+
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #FFF5DE;
+    margin: 7px 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(56, 44, 32, 0.98);
+    z-index: 99;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+/* Tablet Responsive Design (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav-links {
+        padding: 0px 15px;
+    }
+
+    .left-links li, .right-links li {
+        margin: 0 10px;
+    }
+}
+
+/* Mobile Responsive Design (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  
+    .navbar {
+        height: 40px; /* Ajustează această valoare după preferințe */
+        padding: 5px 0; /* Reducere padding pentru a micșora înălțimea */
+    }
+
+    
+
+    .nav-left, .nav-right {
+        display: none;
+    }
+
+    
+
+    .logo {
+        position: absolute;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 80px;
+        margin: 0;
+        position: relative;
+        align-items: center;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section {
+        padding: 1rem;
+    }
+
+    .menu-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+
+
+
+.social-icons img {
+    width: 25px;
+    margin: 0 8px;
+}
+.hamburger {
+    display: block;
+    position: relative;
+    left: 150px;
+    top: -16px;
+}
+
+
+.navbar {
+height: 40px; /* Ajustează această valoare după preferințe */
+padding: 5px 0; /* Reducere padding pentru a micșora înălțimea */
+}
+
+
+
+.nav-left, .nav-right {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    align-items: center;
+  }
+  
+  .logo img {
+      width: 80px;
+      margin: 0;
+      position: relative;
+      align-items: center;
+  }
+
+  .hero {
+    height: 40vh;
+}
+
+
+
+.mobile-menu {
+    display: block;
+}
+
+.mobile-menu.active {
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-menu li {
+    margin: 20px 0;
+}
+
+.mobile-menu a {
+    color: #FFF5DE;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.dishes-grid {
+    grid-template-columns: 1fr;
+}
+
+.category-header {
+    width: 100%;
+    padding: 15px;
+}
+
+.category-header h2 {
+    font-size: 20px;
+}
+
+.category-header p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.menu-category {
+    padding: 30px 15px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #382c20;
+    margin-top: 150px; /* Spațiu deasupra */
+   position: absolute   ;
+   width: 100%;
+   left: 0px;
+   right: 0px;
+    justify-content: center; /* Centrează pe verticală */
+    align-items: center; /* Centrează pe orizontală */
+    color: #fff; /* Asigură că textul este alb */
+}
+
+.social-icons img {
+    width: 25px;
+    margin: 0 8px;
+}
+
+
+
+}
+

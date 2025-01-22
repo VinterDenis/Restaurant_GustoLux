@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GustoLux Restaurant</title>
+    <link rel="stylesheet" href="despre_noi.css">
+</head>
+<body>
+
+
+    <section class="hero">
+
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="nav-left">
+                <ul class="nav-links left-links">
+                    <li><a class="despre-noi" href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                        <li><a class="meniu" href="../Meniu/meniu.html">Meniu</a></li>
+                </ul>
+                </div>  
+                    <div class="logo">
+
+                    <a href="../../index.html">
+                        <img src="../Imagini/Logo(1).png" alt="Descriere imagine" />
+                    </a>
+                    
+                    </div>
+                    
+                <div class="nav-right">
+                        <ul class="nav-links right-links">
+                        <li><a class="echipa" href="../Echipa/echipa.html">Echipa</a></li>
+                        <li><a class="contact" href="../Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
+       <!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+        <li><a href="../Meniu/meniu.html">Meniu</a></li>
+        <li><a href="../Echipa/echipa.html">Echipa</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+    
+        </header>
+
+
+        <div class="hero-text">
+                
+            <div class="main-content">
+                <div class="about-us">
+                    <h2>Despre noi</h2>
+                    <p>Bine ați venit la GustoLux! În inima orașului, restaurantul nostru a luat naștere din dorința de a aduce o experiență culinară unică. Fondat în anul 2004, GustoLux și-a propus să ofere nu doar preparate de calitate, ci și o atmosferă în care să te simți ca acasă, înconjurat de arome autentice și o echipă prietenoasă.</p>
+                    <p>În 2023, restaurantul a trecut printr-o renovare completă, transformându-se într-un spațiu modern și luxos, perfect pentru oaspeții care caută o experiență culinară de excepție. Această renovare nu doar că a îmbunătățit ambianța, dar a și consolidat poziționarea restaurantului ca un loc de referință pentru cinele de lux și evenimentele speciale, oferind clienților o experiență memorabilă dincolo de simpla masă.</p>
+                </div>
+
+                <div class="mission">
+                    <h2>Misiunea noastră</h2>
+                    <p>Misiunea noastră este de a oferi oaspeților o experiență culinară de neuitat, printr-o combinație perfectă între preparate inovative, ingrediente locale de cea mai bună calitate și un serviciu impecabil. Ne propunem să creăm un cadru modern și sofisticat, unde fiecare vizită devine o celebrare a gusturilor autentice și a rafinamentului. Avem dorința de a transforma fiecare masă într-o experiență deosebită, care să răspundă celor mai înalte standarde de calitate și satisfacție.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+<script>
+
+// Detectarea elementelor care trebuie animate
+const elementsToAnimate = document.querySelectorAll('.about-us, .mission');
+
+// Detectarea dacă un element este în vizorul utilizatorului
+function checkVisibility() {
+    elementsToAnimate.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            element.classList.add('show'); // Adăugăm clasa show pentru a activa animația
+        }
+    });
+}
+
+// Verifică vizibilitatea la fiecare scroll
+window.addEventListener('scroll', checkVisibility);
+
+// Apelarea funcției de la început pentru a verifica vizibilitatea inițială
+checkVisibility();
+
+    </script>
+
+
+
+
+
+
+    </section>
+
+
+    
+
+
+
+   
+
+    <section class="reviews">
+        <h2>Recenzii</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <img src="../Imagini/Smiley.jpg" alt="Smiley">
+                <div class="quote">"GustoLux e locul perfect pentru o experiență culinară de top! Atmosferă faină, mâncare delicioasă și servicii impecabile. Recomand din suflet!"</div>
+                <div class="author">- Smiley</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="review-card">
+                <img src="../Imagini/Bontea.jpg" alt="Chef Sorin Bontea">
+                <div class="quote">"Un loc unde tradiția și inovația se întâlnesc perfect. O experiență de neuitat!"</div>
+                <div class="author">-Chef Sorin Bontea</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="review-card">
+                <img src="../Imagini/Florin-Dumitrescu.jpg" alt="Chef Florin Dumitrescu">
+                <div class="quote">"Preparatele sunt impecabile, cu gusturi bine echilibrate și o tehnică desăvârșită. Recomand cu încredere!"</div>
+                <div class="author">- Chef Florin Dumitrescu</div>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="review-card">
+                <img src="../Imagini/Scarlatescu.png" alt="Chef Cătălin Scărlătescu">
+                <div class="quote">"Mâncare excelentă, plină de emoție și creativitate. Felicitări echipei!"</div>
+                <div class="author">- Chef Cătălin Scărlătescu</div>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<script>
+
+// Funcția pentru a verifica dacă un element este în vizorul paginii
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Selectează toate cardurile de recenzie
+const reviewCards = document.querySelectorAll('.review-card');
+
+// Ascultă evenimentul de scroll
+window.addEventListener('scroll', () => {
+    reviewCards.forEach(card => {
+        if (isElementInViewport(card)) {
+            card.classList.add('show'); // Aplica efectul de coborâre
+        }
+    });
+});
+
+</script>
+
+
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        let isAnimating = false;
+        
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Reset animation flag after transition
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 500);
+            });
+            
+            // Close menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('active') && 
+                    !mobileMenu.contains(e.target) && 
+                    !hamburger.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+        
+    </script>
+
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="../Imagini/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../Imagini/tik tok.png" alt="Tik Tok"></a>
+        <a href="#"><img src="../Imagini/facebook.png" alt="Facebook"></a>
+    </div>
+    <p>&copy; 2025 GustoLux. Toate drepturile rezervate.</p>
+  </footer>
+
+
+</body>
+</html>

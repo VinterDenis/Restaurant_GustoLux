@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GustoLux - Meniu</title>
+    <link rel="stylesheet" href="meniu.css">
+</head>
+<body>
+
+
+    <section class="hero">
+
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="nav-left">
+                <ul class="nav-links left-links">
+                    <li><a class="despre-noi" href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                        <li><a class="meniu" href="../Meniu/meniu.html">Meniu</a></li>
+                </ul>
+                </div>  
+                    <div class="logo">
+
+                    <a href="../../index.html">
+                        <img src="../Imagini/Logo(1).png" alt="Descriere imagine" />
+                    </a>
+                    
+                    </div>
+                    
+                <div class="nav-right">
+                        <ul class="nav-links right-links">
+                        <li><a class="echipa" href="../Echipa/echipa.html">Echipa</a></li>
+                        <li><a class="contact" href="../Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
+       <!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+        <li><a href="../Meniu/meniu.html">Meniu</a></li>
+        <li><a href="../Echipa/echipa.html">Echipa</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+        </header>
+
+    </section>
+
+        </header>
+
+    </section>
+
+
+
+
+    <main>
+        <section class="menu-category">
+            <div class="category-header">
+                <h2><a href="../Meniu/Aperitive-Supe-Salate/Aperitive-Supe-Salate.html">Aperitive, Supe & Salate</a></h2>
+                <p>Descoperă selecția noastră de aperitive savuroase și supe calde, perfecte pentru a-ți deschide apetitul.</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-item">
+                    <img src="../Imagini/carusel2.png" alt="Aperitiv">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/Supe.jpg" alt="Supă">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/Salata.jpg" alt="Salată">
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <div class="category-header">
+                <h2><a href="../Meniu/Feluri-Principale-Garnituri/Feluri-Principale-Garnituri.html">Feluri Principale & Garnituri</a></h2>
+                <p>Preparate consistente din carne și garnituri asortate, create pentru o experiență culinară completă.</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-item">
+                    <img src="../Imagini/carne.png" alt="Fel principal">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/carne_garnituri.jpg" alt="Fel principal">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/crispy.jpg" alt="Fel principal">
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <div class="category-header">
+                <h2><a href="../Meniu/Pizza-Paste/Pizza-Paste.html">Pizza & Paste</a></h2>
+                <p>Delicii italiene autentice – de la pizza cu blat crocant până la paste preparate cu sosuri aromate.</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-item">
+                    <img src="../Imagini/carusel5.jpg" alt="Pizza">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/spaghetti.webp" alt="Paste">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/Paste-Carbonara 1.png" alt="Paste">
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <div class="category-header">
+                <h2><a href="../Meniu/Deserturi-Bauturi/Deserturi-Bauturi.html">Deserturi & Băuturi</a></h2>
+                <p>Răsfață-te cu un desert delicios sau alege din selecția noastră de băuturi pentru a completa masa.</p>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-item">
+                    <img src="../Imagini/pavlova.jpg" alt="Desert">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/clatite.jpeg" alt="Desert">
+                </div>
+                <div class="dish-item">
+                    <img src="../Imagini/carusel6.jpg" alt="Băuturi">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    let isAnimating = false;
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (isAnimating) return;
+            isAnimating = true;
+            
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Reset animation flag after transition
+            setTimeout(() => {
+                isAnimating = false;
+            }, 500);
+        });
+        
+        // Close menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
+});
+    
+</script>
+
+
+<footer>
+    <div class="social-icons">
+        <a href="#"><img src="../Imagini/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../Imagini/tik tok.png" alt="Tik Tok"></a>
+        <a href="#"><img src="../Imagini/facebook.png" alt="Facebook"></a>
+    </div>
+    <p>&copy; 2025 GustoLux. Toate drepturile rezervate.</p>
+  </footer>
+
+
+
+</body>
+</html>

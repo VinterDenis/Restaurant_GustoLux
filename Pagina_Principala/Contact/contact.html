@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GustoLux Restaurant</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <section class="hero">
+
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="nav-left">
+                <ul class="nav-links left-links">
+                    <li><a class="despre-noi" href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                        <li><a class="meniu" href="../Meniu/meniu.html">Meniu</a></li>
+                </ul>
+                </div>  
+                    <div class="logo">
+
+                    <a href="../../index.html">
+                        <img src="../Imagini/Logo(1).png" alt="Descriere imagine" />
+                    </a>
+                    
+                    </div>
+                    
+                <div class="nav-right">
+                        <ul class="nav-links right-links">
+                        <li><a class="echipa" href="../Echipa/echipa.html">Echipa</a></li>
+                        <li><a class="contact" href="../Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
+       <!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+        <li><a href="../Meniu/meniu.html">Meniu</a></li>
+        <li><a href="../Echipa/echipa.html">Echipa</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+        </header>
+
+    </section>
+
+
+<div class="wrapper">
+
+
+        <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h2>Informații de contact</h2>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p>0359 193 466</p>
+                            <!-- 📞 -->
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>restaurant.gustolux@gmail.com</p>
+                            <!-- 📧 -->
+                        </div>
+
+                        <h2>Locație</h2>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>str. Gustului, nr. 5, Oradea, Romania</p>
+                            <!-- 📍 -->
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+                
+<div class="formular">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <div class="contact-left-title">
+            <h2>Formular de contact</h2>
+        </div>
+
+        <input type="hidden" name="access_key" value="1f193c32-3537-4b99-8e01-bbbfbaaf533f">
+
+        <div class="form-group">
+            <label for="first_name">Nume</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Introduceți numele dumneavoastră" class="contact-inputs" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Prenume</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Introduceți prenumele dumneavoastră" class="contact-inputs" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Introduceți adresa de email" class="contact-inputs" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Mesaj</label>
+            <textarea id="message" name="message" placeholder="Scrieți mesajul dumneavoastră aici" class="contact-inputs" required></textarea>
+        </div>
+
+        <button type="submit">Trimite</button>
+    </form>
+</div>
+
+
+
+</div>             
+
+
+          
+
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        let isAnimating = false;
+        
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Reset animation flag after transition
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 500);
+            });
+            
+            // Close menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('active') && 
+                    !mobileMenu.contains(e.target) && 
+                    !hamburger.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+        
+    </script>
+    
+
+
+
+
+    
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="../Imagini/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../Imagini/tik tok.png" alt="Tik Tok"></a>
+            <a href="#"><img src="../Imagini/facebook.png" alt="Facebook"></a>
+        </div>
+        <p>&copy; 2025 GustoLux. Toate drepturile rezervate.</p>
+      </footer>
+
+</body>
+</html>

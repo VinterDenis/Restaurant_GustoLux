@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echipa - GustoLux</title>
+    <link rel="stylesheet" href="echipa.css">
+</head>
+<body>
+
+
+
+    <section class="hero">
+
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            <div class="nav-left">
+                <ul class="nav-links left-links">
+                    <li><a class="despre-noi" href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                        <li><a class="meniu" href="../Meniu/meniu.html">Meniu</a></li>
+                </ul>
+                </div>  
+                    <div class="logo">
+
+                    <a href="../../index.html">
+                        <img src="../Imagini/Logo(1).png" alt="Descriere imagine" />
+                    </a>
+                    
+                    </div>
+                    
+                <div class="nav-right">
+                        <ul class="nav-links right-links">
+                        <li><a class="echipa" href="../Echipa/echipa.html">Echipa</a></li>
+                        <li><a class="contact" href="../Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
+       <!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="../Despre_Noi/despre_noi.html">Despre Noi</a></li>
+        <li><a href="../Meniu/meniu.html">Meniu</a></li>
+        <li><a href="../Echipa/echipa.html">Echipa</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+        </header>
+
+    </section>
+
+
+
+<main>
+    <section class="team">
+        <h2>Echipa</h2>
+
+        <div class="team-grid">
+            <a href="../Echipa/manager/manager.html" class="team-member">
+                <img src="../Imagini/Manager.jpg" alt="Andrei - Managerul restaurantului">
+                <div class="author"><h2>Andrei - Managerul restaurantului</h2></div>
+            </a>
+        
+            <a href="../Echipa/echipa.html" class="team-member">
+                <img src="../Imagini/Bucatar_si_ajutoare.webp" alt="Marcel - Bucătarul-șef">
+                <div class="author"><h2>Marcel - Bucătarul-șef</h2></div>
+            </a>
+        
+            <a href="../Echipa/echipa.html" class="team-member">
+                <img src="../Imagini/barman.jpg" alt="Radu - Barman">
+                <div class="author"><h2>Radu - Barman</h2></div>
+            </a>
+        
+            <a href="../Echipa/echipa.html" class="team-member">
+                <img src="../Imagini/chelner_ospatar_barman.jpg" alt="Chelnerii și ospătarii">
+                <div class="author"><h2>Chelnerii și ospătarii</h2></div>
+            </a>
+
+        </div>
+    </section>
+</main>
+
+
+
+
+
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        let isAnimating = false;
+        
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                
+                // Reset animation flag after transition
+                setTimeout(() => {
+                    isAnimating = false;
+                }, 500);
+            });
+            
+            // Close menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (mobileMenu.classList.contains('active') && 
+                    !mobileMenu.contains(e.target) && 
+                    !hamburger.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    });
+        
+    </script>
+    
+
+
+
+  
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="../Imagini/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../Imagini/tik tok.png" alt="Tik Tok"></a>
+            <a href="#"><img src="../Imagini/facebook.png" alt="Facebook"></a>
+        </div>
+        <p>&copy; 2025 GustoLux. Toate drepturile rezervate.</p>
+      </footer>
+
+
+
+
+</body>
+</html>

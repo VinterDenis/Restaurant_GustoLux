@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #C7AF8E;
+    height: 100%;
+ 
+}
+
+.navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asigură că bara de meniu este deasupra imaginii */
+    background-color: rgba(56, 44, 32, 0.75); /* Fundal semi-transparent */
+    height: auto; /* Lasă înălțimea să se ajusteze automat */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite elementelor să se împartă pe mai multe linii */
+    justify-content: center; /* Centrarea elementelor pe orizontală */
+    line-height: 0px; /* Ajustează line-height pentru a centra textul vertical */
+}
+
+.despre-noi {
+    text-decoration: none;
+    color: #FFF5DE;
+    font-weight: bold;
+    border-bottom: 2px solid #FFF5DE; /* Linia permanentă sub link-ul Despre Noi */
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+} 
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px 25px;
+    
+}
+
+.left-links li {
+    margin: 0 15px;
+    
+}
+
+.right-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF5DE;
+    font-weight: bold;
+    transition: border-bottom 0.1s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #FFF5DE;  /* Linie sub text de culoare #FFF5DE */
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+    margin-top: -40px; /* Permite logo-ului să iasă în afara barei de meniu */
+    margin-bottom: -40px;
+    transition: transform 1s ease;
+}
+.logo img:hover {
+transform: scale(1.1)
+}
+
+
+
+.hero {
+    position: relative;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    background: url('../Imagini/restaurant.png') no-repeat center center/cover ;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundal negru semi-transparent */
+    z-index: 1; /* Fundalul va fi deasupra imaginii */
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Conținutul va fi deasupra overlay-ului */
+    color: white; /* Asigură lizibilitatea textului */
+    padding: 20px; /* Spațiu interior pentru conținut */
+}
+
+
+
+
+
+.hero-text {
+
+    justify-content: center;
+    align-items: center;
+    display: center;
+    text-align: justify;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 300px;
+    z-index: 5;
+    
+}
+
+
+
+
+
+/* Main Content */
+.main-content {
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    
+    position: absolute; /* Permite poziționarea exactă */
+    top: 0px; /* Ajustează după preferință */
+    left: 0px; /* Ajustează după preferință */
+    width: 100%; /* Ajustează lățimea */
+    height: 500px; /* Setează o înălțime fixă sau relativă */
+    bottom: 900px;
+}
+
+
+
+
+.about-us, 
+.mission {
+    background-color: rgba(56, 44, 32, 0.75); /* Fundal semi-transparent */
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.about-us{
+
+    position: relative;
+    bottom: 200px;
+    right: 100px;
+}
+
+.mission{
+    position: relative;
+    top: 150px;
+    left: 100px;
+}   
+
+
+/* Definirea animației pentru a aduce elementul din stânga */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0; /* Elementul va începe invizibil */
+        transform: translateX(-100%); /* Va începe de la stânga paginii */
+    }
+    to {
+        opacity: 1; /* Elementul devine vizibil */
+        transform: translateX(0); /* Va ajunge în poziția finală */
+    }
+}
+
+/* Clasa care va activa animația când elementul ajunge în vizor */
+.hero-text .main-content .about-us,
+.hero-text .main-content .mission {
+    opacity: 0; /* Inițial invizibile */
+    transform: translateX(-100%); /* Pornesc de la stânga */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Efect de tranziție lină */
+}
+
+/* Clasa show care va activa efectul când elementul intră în vizor */
+.show {
+    opacity: 1; /* Face elementul vizibil */
+    animation: slideInFromLeft 0.7s forwards; /* Aplica animația */
+}
+
+
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+
+/* Reviews Section */
+
+.reviews {
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+.reviews h2 {
+    color: #382c20;
+    margin-bottom: 3rem;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adaugă tranziție pentru transformare și umbră */
+}
+
+.review-card:hover {
+    transform: translateY(-10px); /* Cardul se va ridica puțin */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Umbră mai mare la hover */
+}
+
+
+.review-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #000000;
+    /* text-align: justify; */
+}
+
+.author {
+    font-weight: bold;
+    color: #2a2420;
+    /* text-align: justify; */
+}
+
+
+
+/* Definirea unui efect de coborâre */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px); /* Porneste de sus */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Se oprește în poziția normală */
+    }
+}
+
+/* Stilul pentru recenzii care vor fi vizibile doar la scroll */
+.review-card {
+    opacity: 0; /* Inițial, recenziile sunt invizibile */
+    transform: translateY(-50px); /* Inițial, sunt poziționate sus */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Clasa care va fi activată când secțiunea este în vizorul paginii */
+.show {
+    opacity: 1;
+    animation: slideIn 0.5s forwards; /* Aplică animația de coborâre */
+}
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #382c20;
+    margin-top: 150px; /* Spațiu deasupra */
+    display: flex; /* Schimbă layout-ul la flexbox */
+    flex-direction: column; /* Elementele sunt stivuite pe verticală */
+    justify-content: center; /* Centrează pe verticală */
+    align-items: center; /* Centrează pe orizontală */
+    color: #fff; /* Asigură că textul este alb */
+}
+
+.social-icons {
+    display: flex; /* Afișează iconițele în linie */
+    justify-content: center; /* Centrează iconițele pe orizontală */
+    margin-top: 10px; /* Adaugă spațiu deasupra iconițelor */
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle; /* Asigură alinierea corectă verticală */
+}
+
+
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #FFF5DE;
+    margin: 7px 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(56, 44, 32, 0.98);
+    z-index: 99;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Tablet Responsive Design (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        padding: 5rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-us, .mission {
+        position: static;
+        margin: 20px 0;
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+}
+
+/* Mobile Responsive Design (up to 767px) */
+@media screen and (max-width: 767px) {
+    .hamburger {
+        display: block;
+        position: relative;
+        left: 150px;
+        top: -16px;
+    }
+    .hero-text {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+.about-us{
+    display: block;
+    position: relative;
+    bottom: 200px;
+    align-items: center;
+    left: 0px;
+    text-align: justify;
+    width: 100%;
+}
+
+
+.mission{
+    display: none;
+}
+
+
+
+    .navbar {
+        height: 40px; /* Ajustează această valoare după preferințe */
+        padding: 5px 0; /* Reducere padding pentru a micșora înălțimea */
+        }
+
+    
+
+   
+    .nav-left, .nav-right {
+        display: none;
+    }
+
+    
+
+   
+
+   
+
+    .logo {
+        position: absolute;
+        align-items: center;
+      }
+      
+      .logo img {
+          width: 80px;
+          margin: 0;
+          position: relative;
+          align-items: center;
+      }
+
+      .hero {
+        height: 100vh;
+    }
+
+    .main-content {
+        padding: 2rem;
+        margin-top: 60px;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    /* Hamburger Animation Classes */
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .mobile-menu li {
+        margin: 20px 0;
+    }
+
+    .mobile-menu a {
+        color: #FFF5DE;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 500;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+}

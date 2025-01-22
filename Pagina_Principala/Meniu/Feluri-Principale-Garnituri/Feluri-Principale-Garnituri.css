@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d2bc9b;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Asigură că bara de meniu este deasupra imaginii */
+    background-color: rgba(56, 44, 32, 0.75); /* Fundal semi-transparent */
+    height: auto; /* Lasă înălțimea să se ajusteze automat */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite elementelor să se împartă pe mai multe linii */
+    justify-content: center; /* Centrarea elementelor pe orizontală */
+    line-height: 0px; /* Ajustează line-height pentru a centra textul vertical */
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+} 
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px 25px;
+    
+}
+
+.left-links li {
+    margin: 0 15px;
+    
+}
+
+.right-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF5DE;
+    font-weight: bold;
+    transition: border-bottom 0.1s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #FFF5DE;  /* Linie sub text de culoare #FFF5DE */
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+    margin-top: -40px; /* Permite logo-ului să iasă în afara barei de meniu */
+    margin-bottom: -40px;
+    transition: transform 1s ease;
+}
+.logo img:hover {
+transform: scale(1.1)
+}
+
+.hero {
+    position: relative;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    background: url('../../Imagini/multiple\ plates\ on\ a\ table\ with\ various\ dishes\ for\ a\ restaurant\ menu\ website\,\ W\ 1440\ H\ 1024.png') no-repeat center center/cover ;
+    height: 60vh; /* Acoperă jumătate din înălțimea vizorului */
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundal negru semi-transparent */
+    
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Conținutul va fi deasupra overlay-ului */
+    color: white; /* Asigură lizibilitatea textului */
+    padding: 20px; /* Spațiu interior pentru conținut */
+}
+
+/* Header */
+.menu-header {
+    text-align: center;
+    padding: 6rem 0 2rem;
+    background-color: #c4b19e;
+    color: white;
+}
+
+.menu-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Menu sections */
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.menu-section h2 {
+    color: #4a3827;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4a3827;
+    font-style: italic;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    color: #4a3827;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .weight {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.menu-item .price {
+    color: #4a3827;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    padding: 40px;
+    background-color: #382c20;
+    margin-top: 150px; /* Spațiu deasupra */
+    display: flex; /* Schimbă layout-ul la flexbox */
+    flex-direction: column; /* Elementele sunt stivuite pe verticală */
+    justify-content: center; /* Centrează pe verticală */
+    align-items: center; /* Centrează pe orizontală */
+    color: #fff; /* Asigură că textul este alb */
+}
+
+.social-icons {
+    position: relative;
+    bottom: 0px;
+    display: flex; /* Afișează iconițele în linie */
+    justify-content: center; /* Centrează iconițele pe orizontală */
+    margin-top: 10px; /* Adaugă spațiu deasupra iconițelor */
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    vertical-align: middle; /* Asigură alinierea corectă verticală */
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #c4b19e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-header h1 {
+        font-size: 2rem;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}

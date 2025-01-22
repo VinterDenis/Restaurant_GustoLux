@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="stylesheet" href="pagina_principala.css">
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <div class="nav-left">
+                    <ul class="nav-links left-links">
+                        <li><a href="Pagina_Principala/Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                        <li><a href="Pagina_Principala/Meniu/meniu.html">Meniu</a></li>
+                    </ul>
+                </div>  
+                
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Pagina_Principala/Imagini/Logo(1).png" alt="Descriere imagine" />
+                    </a>
+                </div>
+                    
+                <div class="nav-right">
+                    <ul class="nav-links right-links">
+                        <li><a href="Pagina_Principala/Echipa/echipa.html">Echipa</a></li>
+                        <li><a href="Pagina_Principala/Contact/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- Meniu telefon -->
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="Pagina_Principala/Despre_Noi/despre_noi.html">Despre Noi</a></li>
+                    <li><a href="Pagina_Principala/Meniu/meniu.html">Meniu</a></li>
+                    <li><a href="Pagina_Principala/Echipa/echipa.html">Echipa</a></li>
+                    <li><a href="Pagina_Principala/Contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+    
+
+        <div class="hero-text">
+            
+            <h5>GustoLux</h5> 
+            <h1><strong>Locul unde rafinamentul culinar întâlnește luxul pentru o experiență de neuitat!</strong> </h1>
+        
+        </div>
+ 
+
+    </section>
+    
+ <!-- Link-ul pentru carusel -->     
+        <div> 
+            <a href="#carusel" class="scroll-link">Vezi mai multe imagini</a> 
+        </div>
+
+
+       <section class="program">
+        <div  class="program-text">
+        <h2>Program</h2>
+        <p>Luni - Vineri: 10:00 - 22:00</p>
+        <p>Sâmbătă-Duminică: 10:00 - 21:00</p>
+        </div>
+    </section>
+
+<section class="alineat">
+
+<div>
+            <p>Bun venit la GustoLux – locul unde pasiunea pentru gastronomie întâlnește rafinamentul!<br>
+            Fiecare preparat este o experiență culinară unică, creată din ingrediente proaspete și combinații perfecte de arome.<br> 
+            Indiferent dacă vii pentru un prânz relaxant, o cină specială sau un eveniment de neuitat, <br>
+            te așteptăm să descoperi savoarea și eleganța în fiecare farfurie.<br>  
+            Te invităm să te bucuri de momente memorabile într-o atmosferă primitoare și sofisticată!</p>
+</div>
+
+
+</section>
+
+
+
+  
+
+
+
+
+
+</section>
+
+
+    
+
+
+ <!-- Caruselul de imagini -->
+ <div class="container">
+
+   
+    <!-- Full-width images with number text -->
+
+<!-- id pt link -->
+<div id="carusel" class="container">
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="Pagina_Principala/Imagini/carusel1.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="Pagina_Principala/Imagini/carusel2.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="Pagina_Principala/Imagini/carusel3.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="Pagina_Principala/Imagini/carusel4.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="Pagina_Principala/Imagini/carusel5.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+          <img src="Pagina_Principala/Imagini/carusel6.jpg" style="width:100%">
+      </div>
+</div>
+
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="Pagina_Principala/Imagini/carusel1.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="Pagina_Principala/Imagini/carusel2.png" style="width:100%" onclick="currentSlide(2)" alt="">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="Pagina_Principala/Imagini/carusel3.png" style="width:100%" onclick="currentSlide(3)" alt="">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="Pagina_Principala/Imagini/carusel4.png" style="width:100%" onclick="currentSlide(4)" alt="">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="Pagina_Principala/Imagini/carusel5.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src="Pagina_Principala/Imagini/carusel6.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+      </div>
+
+      
+     
+    </div>
+  </div> 
+  
+ 
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div> 
+
+ 
+
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+} 
+    </script>
+
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    let isAnimating = false;
+    
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (isAnimating) return;
+            isAnimating = true;
+            
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Reset animation flag after transition
+            setTimeout(() => {
+                isAnimating = false;
+            }, 500);
+        });
+        
+        // Close menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
+});
+
+</script>
+
+
+
+<footer>
+  <div class="social-icons">
+      <a href="#"><img src="Pagina_Principala/Imagini/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="Pagina_Principala/Imagini/tik tok.png" alt="Tik Tok"></a>
+      <a href="#"><img src="Pagina_Principala/Imagini/facebook.png" alt="Facebook"></a>
+  </div>
+  <p>&copy; 2025 GustoLux. Toate drepturile rezervate.</p>
+</footer>
+
+
+
+
+
+
+
+
+</body>
+</html>
